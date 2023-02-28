@@ -11,6 +11,7 @@ void print_rev(char *string)
 	while (*string)
 	{
 		index += 1;
+		string += 1;
 	}
 	while (index >= 0)
 	{
