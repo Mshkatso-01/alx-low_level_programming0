@@ -42,6 +42,7 @@ void print_int(int number)
 void print_array(int *array, int array_length)
 {
 	int index = 0;
+
 	while (index < array_length)
 	{
 		print_int(array[index]);
