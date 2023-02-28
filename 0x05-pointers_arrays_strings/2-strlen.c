@@ -6,11 +6,12 @@
 int _strlen(char *string)
 {
 	int result = 0;
-	while(*string)
+
+	while (*string)
 	{
 		result += 1;
 		string += 1;
 	}
-	return result;
+	return (result);
 }
 
