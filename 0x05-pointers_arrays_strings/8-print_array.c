@@ -28,9 +28,9 @@ void print_int(int number)
 	}
 	if (number > 9)
 	{
-		print_int(number/10);
+		print_int(number / 10);
 	}
-	_putchar('0' + (number%10));
+	_putchar('0' + (number % 10));
 }
 
 /**
@@ -39,13 +39,13 @@ void print_int(int number)
  *@array_length: length of the array
  *Return: void
  */
-void print_array(int* array, int array_length)
+void print_array(int *array, int array_length)
 {
 	int index = 0;
-	while(index < array_length)
+	while (index < array_length)
 	{
 		print_int(array[index]);
-		if((index + 1) != array_length)
+		if ((index + 1) != array_length)
 		{
 			print_string(", ");
 		}
