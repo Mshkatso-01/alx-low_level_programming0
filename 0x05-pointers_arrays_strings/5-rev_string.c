@@ -1,34 +1,25 @@
-int StringLength(char* String)
+/**
+ * rev_string - prints a string in reverse
+ *@string: pionter to the string to be reverserd
+ *Return: void
+ */
+void rev_string(char *string)
 {
-	int Result = 0;
-	while(*String)
-	{
-		Result += 1;
-		String += 1;
-	}
-	return Result;
-}
+	int index = 0;
+	int length = 0;
 
-void SwapChars(char* C1, char* C2)
-{
-	char Temp = *C1;
-	*C1 = *C2;
-	*C2 = Temp;
-}
-
-void rev_string(char* String)
-{
-	int Length = StringLength(String);
-	int OddLength = (Length % 2 != 0);
-	int Max = Length;
-	if(OddLength)
+	while (string[length])
 	{
-		Max -= 1;
+		length += 1;
 	}
-	Max /= 2;
-	for(int Index = 0; Index <= Max; Index += 1)
+	int max = length / 2;
+	while (index <= max)
 	{
-		SwapChars(&String[Index], &String[Length - Index - 1]);
+		int other_index = length - index - 1;
+		char temp = string[index];
+		string[index] = string[other_index];
+		string[other_index] = temp;
+		index += 1;
 	}
 }
 
