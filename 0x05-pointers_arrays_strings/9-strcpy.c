@@ -4,9 +4,10 @@
  *@src: source string
  *Return: char* - dest
  */
-char* _strcpy(char* dest, char* src)
+char *_strcpy(char *dest, char *src)
 {
 	int index = 0;
+
 	while (src[index] != '\0')
 	{
 		dest[index] = src[index];
