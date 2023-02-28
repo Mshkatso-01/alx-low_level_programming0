@@ -8,10 +8,9 @@
 void print_rev(char *string)
 {
 	int index = 0;
-	while (*string)
+	while (string[index])
 	{
 		index += 1;
-		string += 1;
 	}
 	while (index >= 0)
 	{
