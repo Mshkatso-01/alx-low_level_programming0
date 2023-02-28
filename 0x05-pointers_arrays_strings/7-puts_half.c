@@ -1,30 +1,31 @@
 #include"main.h"
 
-int StringLength(char* String)
+/**
+ *puts_half - print other half of string
+ *@string: string to be printed
+ *Return : void
+ */
+void puts_half(char *string)
 {
-	int Result = 0;
-	while(*String)
-	{
-		Result += 1;
-		String += 1;
-	}
-	return Result;
-}
+	int length = 0;
+	int odd_length;
+	int index;
 
-void puts_half(char* String)
-{
-	int Length = StringLength(String);
-	int OddLength = (Length % 2 != 0);
-	int Index = Length;
-	if(OddLength)
+	while(string[length])
 	{
-		Index += 1;
+		length += 1;
 	}
-	Index /= 2;
-	while(String[Index])
+	odd_length = (length % 2 != 0);
+	index = length;
+	if(odd_length)
 	{
-		_putchar(String[Index]);
-		Index += 1;
+		index += 1;
+	}
+	index /= 2;
+	while(string[index])
+	{
+		_putchar(string[index]);
+		index += 1;
 	}
 	_putchar('\n');
 }
