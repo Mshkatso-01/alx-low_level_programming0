@@ -7,7 +7,7 @@
  */
 void _puts(char *string)
 {
-	while(*string)
+	while (*string)
 	{
 		_putchar(*string);
 		string += 1;
