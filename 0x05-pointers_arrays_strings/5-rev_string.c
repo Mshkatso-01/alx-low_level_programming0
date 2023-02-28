@@ -16,7 +16,7 @@ void rev_string(char *string)
 		length += 1;
 	}
 	max = length / 2;
-	while (index <= max)
+	while (index < max)
 	{
 		other_index = length - index - 1;
 		temp = string[index];
