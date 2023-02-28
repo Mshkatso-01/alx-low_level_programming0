@@ -1,40 +1,55 @@
 #include"main.h"
 
-void PrintString(char* String)
+/**
+ *print_string - prints a string
+ *@string: string to printed
+ *Return : void
+ */
+void print_string(char *string)
 {
-	while(*String)
+	while (*string)
 	{
-		_putchar(*String);
-		String += 1;
+		_putchar(*string);
+		string += 1;
 	}
 }
 
-void PrintInteger(int Number)
+/**
+ *print_int - prints an integer
+ *@number: number to be printed
+ *Return: void
+ */
+void print_int(int number)
 {
-	if(Number < 0)
+	if (number < 0)
 	{
 		_putchar('-');
-		Number = -Number;
+		number = -number;
 	}
-	if(Number > 9)
+	if (number > 9)
 	{
-		PrintInteger(Number/10);
+		print_int(number/10);
 	}
-	int Digit = Number % 10;
-	_putchar('0' + Digit);
+	_putchar('0' + (number%10));
 }
 
-void print_array(int* Array, int ArraeyLength)
+/**
+ *print_array - print a series of integers
+ *@array: array of integers to be printed
+ *@array_length: length of the array
+ *Return: void
+ */
+void print_array(int* array, int array_length)
 {
-	int Index = 0;
-	while(Index < ArrayLength)
+	int index = 0;
+	while(index < array_length)
 	{
-		PrintInteger(Array[Index]);
-		if((Index + 1) != ArrayLength)
+		print_int(array[index]);
+		if((index + 1) != array_length)
 		{
-			PrintString(", ");
+			print_string(", ");
 		}
-		Index += 1;
+		index += 1;
 	}
 	_putchar('\n');
 }
