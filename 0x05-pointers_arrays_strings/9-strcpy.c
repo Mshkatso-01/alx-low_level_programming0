@@ -1,12 +1,18 @@
-char* _strcpy(char* Dest, char* Str)
+/**
+ *_strcpy - copy string to another buffer
+ *@dest: destination string
+ *@src: source string
+ *Return: char* - dest
+ */
+char* _strcpy(char* dest, char* src)
 {
-	int Index = 0;
-	while(Str[Index] != '\0')
+	int index = 0;
+	while (src[index] != '\0')
 	{
-		Dest[Index] = Src[Index];
-		Index += 1;
+		dest[index] = src[index];
+		index += 1;
 	}
-	Dest[Index] = '\0';
-	return Dest;
+	dest[index] = '\0';
+	return (dest);
 }
 
