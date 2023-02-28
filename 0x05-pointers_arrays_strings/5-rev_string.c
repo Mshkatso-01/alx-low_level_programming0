@@ -7,16 +7,19 @@ void rev_string(char *string)
 {
 	int index = 0;
 	int length = 0;
+	int max;
+	int other_index;
+	char temp;
 
 	while (string[length])
 	{
 		length += 1;
 	}
-	int max = length / 2;
+	max = length / 2;
 	while (index <= max)
 	{
-		int other_index = length - index - 1;
-		char temp = string[index];
+		other_index = length - index - 1;
+		temp = string[index];
 		string[index] = string[other_index];
 		string[other_index] = temp;
 		index += 1;
