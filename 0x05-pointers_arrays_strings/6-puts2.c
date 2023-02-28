@@ -1,15 +1,21 @@
 #include"main.h"
 
-void puts2(char* String)
+/**
+ *puts2 - prints every other character of a string
+ *@string: pointer to the string
+ *Return: void
+ */
+void puts2(char *string)
 {
-	int Index = 0;
-	while(String[Index])
+	int index = 0;
+
+	while (string[index])
 	{
-		if(Index % 2 == 0)
+		if(index % 2 == 0)
 		{
-			_putchar(String[Index]);
+			_putchar(string[index]);
 		}
-		Index += 1;
+		index += 1;
 	}
 	_putchar('\n');
 }
