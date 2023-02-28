@@ -1,23 +1,22 @@
 #include"main.h"
 
-int StringLength(char* String)
+/**
+ *string_length - print a string in reverse
+ *@string: pointer to the string to be printed
+ *Return: void
+ */
+void print_rev(char *string)
 {
-	int Result = 0;
-	while(*String)
+	int index = 0;
+	while(*string)
 	{
-		Result += 1;
-		String += 1;
+		index += 1;
 	}
-	return Result;
-}
-
-void print_rev(char* String)
-{
-	int Index = StringLength(String) - 1;
-	while(Index >= 0)
+	while(index >= 0)
 	{
-		_putchar(String[Index]);
-		Index -= 1;
+		index -= 1;
+		_putchar(string[index]);
 	}
+	_putchar('\n');
 }
 
