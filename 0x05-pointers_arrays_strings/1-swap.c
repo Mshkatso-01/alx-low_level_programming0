@@ -4,10 +4,10 @@
  *@b: Pointer to the integer to be swapped with a
  *Return: void
  */
-void swap_int(int* A, int* B)
+void swap_int(int *a, int *b)
 {
-	int Temp = *A;
-	*A = *B;
-	*B = Temp;
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
