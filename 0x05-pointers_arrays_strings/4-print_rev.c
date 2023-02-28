@@ -8,11 +8,11 @@
 void print_rev(char *string)
 {
 	int index = 0;
-	while(*string)
+	while (*string)
 	{
 		index += 1;
 	}
-	while(index >= 0)
+	while (index >= 0)
 	{
 		index -= 1;
 		_putchar(string[index]);
