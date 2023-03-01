@@ -1,55 +1,30 @@
 /**
- *is_alphabet - returns wherther a character is alphabet
- *@character: the character to be checked
- *Return: int - check result as a bool value
- */
-int is_alphabet(char character)
-{
-	return ((character >= 'a') && (character <= 'z'));
-}
-
-/**
- *is_delimeter - returns whether a character is a delimeter
- *@character: the character to be checked
- *Return: int - check result as a bool value
- */
-int is_delimeter(char character)
-{
-	char delimeters[] = " \t\n,;.!?\"(){}";
-
-	for (int i = 0; delimeters[i]; i += 1)
-	{
-		if(delimeters[i] == character)
-		{
-			return (1);
-		}
-	}
-	return (0);
-}
-
-
-/**
- *cap_string - capitalize characters of string
- *@string: the string parameter
- *Return: char* - the string after capitalization
+ *cap_string - capitalize word of string
+ *@string: the string to capitalize
+ *Return: char * - the new string
  */
 char *cap_string(char *string)
 {
 	int i = 0;
-	
+	int j = 0;
+	char delimeters[] = " \t\n,;.!?\"(){}";
+
 	while (string[i])
 	{
-		if (is_alphabet(string[i]))
+		if (string[0] >= 'a' && string < 'z')
 		{
-			string[i] -= 32;
+			string[0] -= 32;
 		}
-		else if (is_delimeter(string[i]) && is_alphabet(string[i + 1]))
+		while (delimeters[j])
 		{
-			i += 1;
-			string[i] -= 32;
+			if ((string[i] == delimeters[j]) && ((string[i + 1] >= 'a') && (string[i + 1] <= 'z')))
+			{
+				string[i + 1] -= 32;
+			}
+			j += 1;
 		}
 		i += 1;
 	}
-	return (string);	
+	return (string);
 }
 
