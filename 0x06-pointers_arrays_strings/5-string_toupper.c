@@ -15,6 +15,6 @@ char *string_toupper(char *string)
 			*string -= 32;
 		}
 	}
-	return result;
+	return (result);
 }
 
