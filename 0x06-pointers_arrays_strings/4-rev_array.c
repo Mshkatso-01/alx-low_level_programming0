@@ -1,5 +1,5 @@
 /**
- *rev_array - reverse contents of arra
+ *reverse_array - reverse contents of arra
  *@array: the array
  *@length: array length
  *Return: void
