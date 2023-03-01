@@ -4,7 +4,7 @@
  *@length: array length
  *Return: void
  */
-void rev_array(int *array, int length)
+void reverse_array(int *array, int length)
 {
 	int index = 0;
 	int index2;
