@@ -4,7 +4,7 @@
  *@src: source string
  *Return: char* - destination string
  */
-char* _strcat(char* dest, char* src)
+char *_strcat(char *dest, char *src)
 {
 	int index1 = 0;
 	int index2 = 0;
