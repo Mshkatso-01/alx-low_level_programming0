@@ -6,19 +6,20 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int index1 = 0;
-	int index2 = 0;
-
-	while (dest[index1])
+	int index = 0;
+	char *result;
+	
+	result = dest;
+	while (*dest)
 	{
-		index1 += 1;
+		dest += 1;
 	}
-	do
+	while (src[index])
 	{
-		dest[index1] = src[index2];
-		index1 += 1;
-		index2 += 1;
-	} while (src[index2]);
-	return (dest);
+		dest[index] = src[index];
+		index += 1;
+	}
+	dest[index] = '\0';
+	return (result);
 }
 
