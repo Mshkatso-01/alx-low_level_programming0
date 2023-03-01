@@ -5,15 +5,16 @@
  */
 char *string_toupper(char *string)
 {
-	char* result;
+	char *result;
 
 	result = string;
 	while (*string)
 	{
-		if((*string >= 'a') && (*string <= 'z'))
+		if ((*string >= 'a') && (*string <= 'z'))
 		{
 			*string -= 32;
 		}
+		string += 1;
 	}
 	return (result);
 }
