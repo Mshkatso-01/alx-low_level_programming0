@@ -1,7 +1,7 @@
 /**
- *cap_string - capitalize word of string
+ *cap_string - capitalize words of string
  *@str: the string to capitalize
- *Return: char * - the new string
+ *Return: the new string
  */
 char *cap_string(char *str)
 {
