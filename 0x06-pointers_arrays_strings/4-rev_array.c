@@ -9,7 +9,7 @@ void reverse_array(int *array, int length)
 	int index = 0;
 	int index2;
 	int temp;
-	
+
 	index2 = length - 1;
 	while (index < index2)
 	{
