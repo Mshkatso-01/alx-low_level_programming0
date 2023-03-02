@@ -1,5 +1,5 @@
 /**
- *_strncpy - concatenate up to a limit
+ *_strncat - concatenate up to a limit
  *@dest: destination string
  *@src: source string
  *@n: limit
