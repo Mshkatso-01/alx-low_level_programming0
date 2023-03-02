@@ -1,25 +1,21 @@
 /**
- *leet - encode string to 1337
- *@string: the string to be encoded
- *Return: char * - the string after encoding
- */
+* leet - encode a string to 1337
+*@string: string that will be encoded
+*Return: encoded string
+*/
 char *leet(char *string)
 {
-	int i = 0;
-	int j = 0;
-	char l[] = "ol_ea__t";
+	int index1 = 0, index2;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	while (string[i])
+	while (string[++index1])
 	{
-		while (l[j])
+		for (index2 = 0; index2 <= 7; index2++)
 		{
-			if (string[i] == l[j] || string[i] == (l[j] - 32))
-			{
-				string[i] = '0' + j;
-			}
-			j += 1;
+			if (string[index1] == leet[index2] ||
+			 string[index1] - 32 == leet[index2])
+				string[index1] = index2 + '0';
 		}
-		i += 1;
 	}
 	return (string);
 }
