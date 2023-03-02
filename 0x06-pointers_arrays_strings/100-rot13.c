@@ -1,25 +1,29 @@
 /**
- *rot13 - encodes a string using rot13 method
- *@string: the string to be encoded
- *Return: the string after encoding
+ * rot13 - encodes string using rot13
+ * @string: pointer to string params
+ * Return: pointer to string
  */
 char *rot13(char *string)
 {
-	char *result;
+  int i = 0;
+  int j = 0;
+  char data[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  char rotated[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	result = string;
-	while (*string)
-	{
-		if (*string >= 'a' && *string <= 'z')
-		{
-			*string = 'a' + ((*string + 13) % 26);
-		}
-		else if (*string >= 'A' && *string <= 'Z')
-		{
-			*string = 'A' + ((*string + 13) % 26);
-		}
-		string += 1;
-	}
-	return (result);
+  while (string[i])
+  {
+    while (data[j])
+    {
+      if (string[i] == data[j])
+      {
+        string[i] = rotated[j];
+        break;
+      }
+      j += 1;
+    }
+    j = 0;
+    i += 1;
+  }
+  return (string);
 }
 
