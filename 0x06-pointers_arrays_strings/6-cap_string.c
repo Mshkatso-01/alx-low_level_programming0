@@ -29,6 +29,7 @@ char *cap_string(char *string)
 		{
 			string[index] -= 32;
 		}
+		index += 1;
 	}
 	return (string);
 }
