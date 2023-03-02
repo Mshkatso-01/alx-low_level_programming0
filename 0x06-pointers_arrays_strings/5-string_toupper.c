@@ -1,6 +1,6 @@
 /**
  *string_toupper - convert lowercase characters to uppercase
- *@string - the string itself!!
+ *@string: the string itself!!
  * Return: char* - the string afterwards
  */
 char *string_toupper(char *string)
