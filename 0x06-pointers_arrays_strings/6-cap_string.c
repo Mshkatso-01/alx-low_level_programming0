@@ -3,38 +3,30 @@
  *@string: the string to capitalize
  *Return: char * - the new string
  */
-char *cap_string(char *string)
+char *cap_string(char *str)
 {
 	int index = 0;
 
-	while (string[index])
+	while (str[++index])
 	{
-		while (string[index] >= 'a' || string[index] >= 'z')
-		{
-			index += 1;
-		}
-		if (string[index] == ' ' ||
-				string[index] == '\t' ||
-				string[index] == '\n' ||
-				string[index] == ',' ||
-				string[index] == ';' ||
-				string[index] == '.' ||
-				string[index] == '!' ||
-				string[index] == '?' ||
-				string[index] == '"' ||
-				string[index] == '(' ||
-				string[index] == ')' ||
-				string[index] == '{' ||
-				string[index] == '}')
-		{
-			index += 1;
-			if (string[index] >= 'a' || string[index] >= 'z')
-			{
-				string[index] -= 32;
-			}
-		}
-		index += 1;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+				str[index - 1] == '\t' ||
+				str[index - 1] == '\n' ||
+				str[index - 1] == ',' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
+				str[index - 1] == '}')
+			str[index] -= 32;
 	}
-	return (string);
+	return (str);
 }
 
