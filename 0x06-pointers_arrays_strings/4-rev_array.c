@@ -1,7 +1,7 @@
 /**
- *reverse_array - reverse contents of arra
- *@array: the array
- *@length: array length
+ *reverse_array - reverse contents of array
+ *@array: the array parameter
+ *@length: length of the array
  *Return: void
  */
 void reverse_array(int *array, int length)
@@ -9,16 +9,15 @@ void reverse_array(int *array, int length)
 	int index = 0;
 	int index2;
 	int temp;
-	int max;
-
-	max = length / 2;
-	while (index <= max)
+	
+	index2 = length - 1;
+	while (index < index2)
 	{
-		index2 = length - index - 1;
 		temp = array[index];
 		array[index] = array[index2];
 		array[index2] = temp;
 		index += 1;
+		index2 -= 1;
 	}
 }
 
