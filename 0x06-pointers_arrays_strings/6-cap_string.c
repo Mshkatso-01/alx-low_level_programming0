@@ -27,7 +27,11 @@ char *cap_string(char *string)
 				string[index] == '{' ||
 				string[index] == '}')
 		{
-			string[index] -= 32;
+			index += 1;
+			if (string[index] >= 'a' || string[index] >= 'z')
+			{
+				string[index] -= 32;
+			}
 		}
 		index += 1;
 	}
