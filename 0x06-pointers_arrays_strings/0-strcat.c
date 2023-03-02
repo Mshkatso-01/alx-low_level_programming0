@@ -1,7 +1,5 @@
-#include"main.h"
-
 /**
- *_strcat - concatenates two strings into the destination and adds a null-terminator
+ *_strcat - concatenates two strings into dest
  *@dest: destination string
  *@src: source string
  *Return: pointer to destination
@@ -10,7 +8,7 @@ char *_strcat(char *dest, char *src)
 {
 	int index = 0;
 	char *result;
-	
+
 	result = dest;
 	while (*dest)
 	{
